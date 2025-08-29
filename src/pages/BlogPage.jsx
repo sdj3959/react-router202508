@@ -1,4 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
+import styles from './BlogPage.module.scss';
+import {posts} from '../dummy-data/dummy-post';
+import PostCard from "../components/PostCard.jsx";
 
 const BlogPage = () => {
 
@@ -8,9 +11,11 @@ const BlogPage = () => {
 
   return (
     <>
-      <h1>
-        Blog 페이지입니다.
-      </h1>
+      <div className={styles.blog}>
+        <div className={styles.grid}>
+          {posts.map(post => <PostCard key={post.id} post={post} />)}
+        </div>
+      </div>
     </>
   );
 };
