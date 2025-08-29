@@ -32,7 +32,6 @@ const BlogPage = () => {
 
         <BlogFilter />
 
-        <BlogSideBar />
         <div className={styles.grid}>
           {posts
             // 제목 또는 내용으로 검색
